@@ -1,15 +1,10 @@
 import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import {
-    randomCreatedDate,
-    randomTraderName,
-    randomUpdatedDate,
-} from "@mui/x-data-grid-generator";
 
-export default function Datagrid() {
+export default function Datagrid({ patients }) {
     return (
         <div style={{ height: 300, width: "100%" }}>
-            <DataGrid rows={rows} columns={columns} />
+            <DataGrid rows={patients} columns={columns} />
         </div>
     );
 }
@@ -36,37 +31,23 @@ const columns = [
 const rows = [
     {
         id: 1,
-        name: randomTraderName(),
+        name: "Kunal",
         age: 25,
-        dateCreated: randomCreatedDate(),
-        lastLogin: randomUpdatedDate(),
+        dateCreated: new Date(18 / 5 / 1999),
+        lastLogin: new Date(18 / 5 / 2020),
     },
     {
         id: 2,
-        name: randomTraderName(),
-        age: 36,
-        dateCreated: randomCreatedDate(),
-        lastLogin: randomUpdatedDate(),
+        name: "John",
+        age: 25,
+        dateCreated: new Date(18 / 5 / 1999),
+        lastLogin: new Date(18 / 5 / 2020),
     },
     {
         id: 3,
-        name: randomTraderName(),
-        age: 19,
-        dateCreated: randomCreatedDate(),
-        lastLogin: randomUpdatedDate(),
-    },
-    {
-        id: 4,
-        name: randomTraderName(),
-        age: 28,
-        dateCreated: randomCreatedDate(),
-        lastLogin: randomUpdatedDate(),
-    },
-    {
-        id: 5,
-        name: randomTraderName(),
-        age: 23,
-        dateCreated: randomCreatedDate(),
-        lastLogin: randomUpdatedDate(),
+        name: "Jeff",
+        age: 25,
+        dateCreated: new Date(18 / 5 / 1999),
+        lastLogin: new Date(18 / 5 / 2020),
     },
 ];
